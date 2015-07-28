@@ -3,7 +3,7 @@ layout: post
 title: Ceph na szybko
 ---
 Czasami trzeba bardzo szybko uruchomić jakąkolwiek działającą wersje cepha, taki skrypt robiący jedną działającą instancję mon i osd na jednym hoście może sie wtedy przydać.
-```
+~~~
 #dysk na dane
 export DATA_DEV=sdb
 #dysk na journal
@@ -25,4 +25,4 @@ ceph-deploy disk zap $HOST:$DATA_DEV
 ceph-deploy disk zap $HOST:$JRNL_DEV
 ceph-deploy osd create $HOST:$DATA_DEV:$JRNL_DEV
 sudo chmod +r /etc/ceph/ceph.client.admin.keyring
-```
+~~~
